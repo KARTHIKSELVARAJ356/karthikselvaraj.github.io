@@ -1,48 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Karthik | AWS Data Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <div class="container nav-content">
-    <h2 class="logo">Portfolio</h2>
+  <div class="nav-content">
+    <h2 class="logo">Karthik</h2>
     <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
+      <a href="#home">Home</a>
+      <a href="#bio">Bio</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-container">
-
-    <!-- LEFT -->
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="hero-inner">
     <div class="hero-text">
       <h1>Karthik</h1>
-      <p class="role">AWS Data Engineer</p>
-      <p class="desc">
+      <h3>AWS Data Engineer</h3>
+      <p>
         I build scalable data pipelines, automate ETL workflows,
-        and support production data systems on AWS.
+        and support production systems using AWS and big data technologies.
       </p>
-
-      <a href="#contact" class="btn">Contact</a>
     </div>
-
-    <!-- RIGHT -->
-    <div class="hero-image">
-      <img src="profile.jpg" alt="Profile">
-    </div>
-
   </div>
 </section>
+
+<!-- BIO -->
+<section id="bio" class="section">
+  <h2>About Me</h2>
+  <p>
+    AWS Data Engineer with hands-on experience in batch and streaming data pipelines.
+    I specialize in building reliable ETL systems, data ingestion frameworks,
+    and supporting production workloads on AWS.
+  </p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section bg-dark">
+  <h2>Education</h2>
+  <div class="card">
+    <h3>Bachelor’s Degree</h3>
+    <p>Computer Science / Related Field</p>
+    <span>Year of Graduation</span>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>AWS Data Engineer</h3>
+    <span>Company Name • Duration</span>
+    <ul>
+      <li>Designed and supported ETL pipelines using PySpark and AWS Glue</li>
+      <li>Handled production incidents, monitoring, and performance tuning</li>
+      <li>Worked extensively with S3, Lambda, Redshift, and Airflow</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section bg-dark">
+  <h2>Projects</h2>
+
+  <div class="card project">
+    <h3>SFTP → S3 → MySQL ETL Pipeline</h3>
+    <p><strong>Problem:</strong> Manual SFTP file ingestion.</p>
+    <p><strong>Solution:</strong> Automated ETL pipeline using Python.</p>
+    <p><strong>Tools:</strong> Python, AWS S3, SQLAlchemy, MySQL</p>
+    <p><strong>Outcome:</strong> Reliable daily ingestion with logging.</p>
+  </div>
+
+  <div class="card project">
+    <h3>AWS Glue PySpark Pipeline</h3>
+    <p><strong>Problem:</strong> Large-scale data transformation.</p>
+    <p><strong>Solution:</strong> PySpark-based Glue jobs.</p>
+    <p><strong>Tools:</strong> PySpark, AWS Glue, S3</p>
+    <p><strong>Outcome:</strong> Improved processing time and cost efficiency.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Python</span>
+    <span>SQL</span>
+    <span>PySpark</span>
+    <span>AWS Glue</span>
+    <span>S3</span>
+    <span>Lambda</span>
+    <span>Redshift</span>
+    <span>Airflow</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section bg-dark">
+  <h2>Contact</h2>
+  <p>Email: your-email@gmail.com</p>
+  <p class="links">
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+  </p>
+</section>
+
+<footer class="footer">
+  © 2026 Karthik • AWS Data Engineer
+</footer>
 
 </body>
 </html>
