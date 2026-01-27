@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at top, #1e1b4b, #020617 60%);
+  background: radial-gradient(circle at top, #1e1b4b, #020617 65%);
   color: #e5e7eb;
 }
 
@@ -14,13 +14,13 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  backdrop-filter: blur(14px);
+  z-index: 100;
+  backdrop-filter: blur(12px);
   background: rgba(2,6,23,0.6);
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  z-index: 100;
 }
 
-.nav-content {
+.nav-inner {
   max-width: 1200px;
   margin: auto;
   padding: 22px 30px;
@@ -29,12 +29,13 @@ body {
   align-items: center;
 }
 
-.logo {
+.brand {
+  font-size: 20px;
   font-weight: 700;
 }
 
 .navbar a {
-  margin-left: 26px;
+  margin-left: 28px;
   text-decoration: none;
   color: #c7d2fe;
   position: relative;
@@ -48,7 +49,7 @@ body {
   width: 0;
   height: 2px;
   background: #38bdf8;
-  transition: 0.3s;
+  transition: width 0.3s;
 }
 
 .navbar a:hover::after {
@@ -63,28 +64,28 @@ body {
   padding-top: 120px;
 }
 
-.hero-inner {
+.hero-content {
   max-width: 1200px;
   margin: auto;
   padding: 0 30px;
 }
 
-.hero-text h1 {
+.hero h1 {
   font-size: 72px;
   background: linear-gradient(90deg,#38bdf8,#818cf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.hero-text h3 {
-  color: #93c5fd;
+.hero h2 {
   margin-top: 10px;
+  color: #93c5fd;
 }
 
-.hero-text p {
+.hero p {
   max-width: 600px;
   margin-top: 20px;
-  line-height: 1.7;
+  font-size: 18px;
   opacity: 0.9;
 }
 
@@ -95,21 +96,17 @@ body {
   padding: 100px 30px;
 }
 
-.bg-dark {
-  background: rgba(15,23,42,0.9);
-}
-
 .section h2 {
-  margin-bottom: 30px;
   font-size: 34px;
+  margin-bottom: 30px;
 }
 
 /* CARDS */
 .card {
   background: rgba(2,6,23,0.85);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 35px;
+  border-radius: 18px;
+  padding: 32px;
   margin-bottom: 30px;
   transition: 0.4s;
 }
@@ -140,14 +137,9 @@ body {
 }
 
 /* CONTACT */
-.links a {
-  margin-right: 20px;
+.contact a {
   color: #93c5fd;
   text-decoration: none;
-}
-
-.links a:hover {
-  text-decoration: underline;
 }
 
 /* FOOTER */
