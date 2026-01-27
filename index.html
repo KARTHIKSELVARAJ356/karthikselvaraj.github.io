@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Karthik | Data Engineer</title>
+  <meta charset="UTF-8" />
+  <title>Karthik | AWS Data Engineer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-content">
+    <h2>Karthik</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Hi, I'm Karthik 👋</h1>
-    <p class="subtitle">
-      AWS Data Engineer | PySpark | SQL | Airflow
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>AWS Data Engineer</h1>
+    <p class="hero-subtitle">
+      PySpark • SQL • Airflow • AWS
     </p>
-    <p class="desc">
-      I build scalable data pipelines, automate ETL workflows,
-      and support production systems on AWS.
+    <p class="hero-desc">
+      I design, build, and support scalable data pipelines and ETL workflows
+      on AWS with a strong focus on reliability and production systems.
     </p>
-  </section>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
     <h2>About Me</h2>
     <p>
       I am an AWS Data Engineer with hands-on experience in batch and streaming
-      pipelines. I have worked on data ingestion, transformation, and loading
-      using PySpark, AWS Glue, S3, Lambda, Redshift, and Airflow.
+      data pipelines. I have worked on end-to-end data ingestion, transformation,
+      and loading using PySpark, AWS Glue, S3, Lambda, Redshift, and Airflow.
+      I also support production systems and resolve pipeline issues efficiently.
     </p>
-  </section>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section>
+<!-- SKILLS -->
+<section id="skills" class="section bg-light">
+  <div class="container">
     <h2>Skills</h2>
     <div class="skills">
       <span>Python</span>
@@ -43,42 +60,51 @@
       <span>Lambda</span>
       <span>Redshift</span>
       <span>Airflow</span>
+      <span>MySQL</span>
+      <span>PostgreSQL</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
     <h2>Projects</h2>
 
-    <div class="card">
+    <div class="project-card">
       <h3>SFTP → S3 → MySQL ETL Pipeline</h3>
-      <p><strong>Problem:</strong> Manual file ingestion from SFTP.</p>
-      <p><strong>Solution:</strong> Automated ETL pipeline using Python.</p>
+      <p><strong>Problem:</strong> Manual file ingestion from SFTP caused delays and errors.</p>
+      <p><strong>Solution:</strong> Built an automated Python ETL pipeline to ingest files into S3 and load into MySQL.</p>
       <p><strong>Tools:</strong> Python, AWS S3, SQLAlchemy, MySQL</p>
-      <p><strong>Outcome:</strong> Reliable daily ingestion with logging.</p>
+      <p><strong>Outcome:</strong> Reliable daily ingestion with proper logging and error handling.</p>
     </div>
 
-    <div class="card">
+    <div class="project-card">
       <h3>AWS Glue PySpark Data Pipeline</h3>
-      <p><strong>Problem:</strong> Transform large datasets efficiently.</p>
-      <p><strong>Solution:</strong> Built Glue jobs using PySpark.</p>
-      <p><strong>Tools:</strong> PySpark, Glue, S3</p>
-      <p><strong>Outcome:</strong> Optimized performance and cost.</p>
+      <p><strong>Problem:</strong> Large datasets required efficient transformation at scale.</p>
+      <p><strong>Solution:</strong> Developed PySpark jobs in AWS Glue to transform and load data into curated tables.</p>
+      <p><strong>Tools:</strong> PySpark, AWS Glue, S3</p>
+      <p><strong>Outcome:</strong> Improved performance and reduced processing time.</p>
     </div>
 
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section class="contact">
+<!-- CONTACT -->
+<section id="contact" class="section bg-dark">
+  <div class="container">
     <h2>Contact</h2>
     <p>Email: your-email@gmail.com</p>
-    <p>
-      <a href="#">GitHub</a> |
-      <a href="#">LinkedIn</a>
+    <p class="links">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
     </p>
-  </section>
+  </div>
+</section>
 
-</div>
+<footer class="footer">
+  © 2026 Karthik • AWS Data Engineer
+</footer>
 
 </body>
 </html>
