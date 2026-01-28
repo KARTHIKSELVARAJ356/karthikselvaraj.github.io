@@ -1,109 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Karthik | Data Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<title>Karthik Selvaraj | AWS Data Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+/* ================== RESET ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #0ea5e9, transparent 40%),
+              radial-gradient(circle at bottom right, #6366f1, transparent 40%),
+              #020617;
+  color: #e5e7eb;
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2,6,23,0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 999;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav a {
+  margin-left: 18px;
+  font-size: 15px;
+  color: #e5e7eb;
+  text-decoration: none;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ================== SECTION ================== */
+section {
+  display: none;
+  max-width: 1200px;
+  margin: auto;
+  padding: 140px 22px 70px;
+  animation: fadeUp 0.6s ease;
+}
+
+section.active {
+  display: block;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================== HOME ================== */
+.hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero h2 {
+  margin: 15px 0 20px;
+  font-size: 26px;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  max-width: 720px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #cbd5f5;
+}
+
+/* ================== CARDS ================== */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  padding: 26px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 30px 60px rgba(56,189,248,0.15);
+}
+
+.card h3 {
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.card span {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.card ul {
+  margin-top: 14px;
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* ================== SKILLS ================== */
+.skills span {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg,
+    rgba(56,189,248,0.2),
+    rgba(129,140,248,0.2)
+  );
+  border: 1px solid rgba(56,189,248,0.35);
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.skills span:hover {
+  transform: translateY(-6px);
+}
+
+/* ================== CONTACT ================== */
+.contact a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ================== FOOTER ================== */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ================== RESPONSIVE ================== */
+@media(max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  nav a { margin-left: 10px; }
+}
+</style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="nav-inner">
-    <span class="brand">Karthik</span>
+    <div class="brand">Karthik</div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#" onclick="show('home')">Home</a>
+      <a href="#" onclick="show('education')">Education</a>
+      <a href="#" onclick="show('experience')">Experience</a>
+      <a href="#" onclick="show('projects')">Projects</a>
+      <a href="#" onclick="show('skills')">Skills</a>
+      <a href="#" onclick="show('contact')">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- HOME -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Karthik</h1>
-    <h2>AWS Data Engineer</h2>
-    <p>
-      I build scalable data pipelines, automate ETL workflows,
-      and support production systems using AWS and big data technologies.
-    </p>
+<section id="home" class="active hero">
+  <h1>Karthik Selvaraj</h1>
+  <h2>AWS Data Engineer</h2>
+  <p>
+    AWS Data Engineer with 3+ years of experience designing scalable,
+    production-grade data pipelines using AWS Glue, PySpark, Amazon S3,
+    Redshift, and Apache Airflow. Expert in handling real-time issues,
+    data quality, and analytics-ready datasets.
+  </p>
+</section>
+
+<section id="education">
+  <div class="card">
+    <h3>M.Sc. Bioinformatics (Integrated)</h3>
+    <p>Bharathidasan University, Tiruchirappalli</p>
+    <span>2016 – 2021</span>
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education" class="section">
-  <h2>Education</h2>
+<section id="experience">
   <div class="card">
-    <h3>Bachelor’s Degree</h3>
-    <p>Computer Science / Related Field</p>
-    <span>Year of Graduation</span>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="section">
-  <h2>Experience</h2>
-  <div class="card">
-    <h3>AWS Data Engineer</h3>
-    <span>Company Name • Duration</span>
+    <h3>Junior Data Engineer</h3>
+    <span>QR Solutions • Oct 2023 – Oct 2025</span>
     <ul>
-      <li>Designed and maintained ETL pipelines using PySpark and AWS Glue</li>
-      <li>Handled production incidents and data quality issues</li>
-      <li>Worked with S3, Lambda, Redshift, and Airflow</li>
+      <li>Designed AWS Glue & PySpark ETL pipelines</li>
+      <li>Ingested SAP & enterprise DB data into Amazon S3</li>
+      <li>Implemented Landing → Trusted architecture</li>
+      <li>Loaded curated datasets into Amazon Redshift</li>
+      <li>Handled production incidents & SLA issues</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Data Engineer – Trainee</h3>
+    <span>Gomsu Information Technology • Nov 2022 – Oct 2023</span>
+    <ul>
+      <li>Designed relational schemas and SQL logic</li>
+      <li>Built validation rules & stored procedures</li>
     </ul>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2>Projects</h2>
-
+<section id="projects">
   <div class="card">
-    <h3>SFTP → S3 → MySQL ETL Pipeline</h3>
-    <p><strong>Tools:</strong> Python, AWS S3, SQLAlchemy, MySQL</p>
-    <p>Automated ingestion of files from SFTP into MySQL with logging and retries.</p>
+    <h3>Enterprise AWS Data Platform</h3>
+    <p>
+      Built end-to-end pipelines ingesting data from SAP, Oracle, SQL Server,
+      and Informatica into S3, transforming using PySpark, and delivering
+      analytics-ready data.
+    </p>
   </div>
 
   <div class="card">
-    <h3>AWS Glue PySpark Pipeline</h3>
-    <p><strong>Tools:</strong> PySpark, AWS Glue, S3</p>
-    <p>Built scalable Spark jobs to transform large datasets efficiently.</p>
+    <h3>Event-Driven Automation</h3>
+    <p>
+      Implemented S3-triggered Lambda workflows for schema checks,
+      automation, and monitoring.
+    </p>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="section">
-  <h2>Skills</h2>
+<section id="skills">
   <div class="skills">
-    <span>Python</span>
-    <span>SQL</span>
-    <span>PySpark</span>
-    <span>AWS Glue</span>
-    <span>S3</span>
-    <span>Lambda</span>
-    <span>Redshift</span>
-    <span>Airflow</span>
+    <span>Python</span><span>SQL</span><span>PySpark</span>
+    <span>AWS Glue</span><span>S3</span><span>Redshift</span>
+    <span>Athena</span><span>Lambda</span><span>Airflow</span>
+    <span>Kinesis</span>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact">
-  <h2>Contact</h2>
-  <p>Email: your-email@gmail.com</p>
+<section id="contact" class="contact">
+  <p>Email: karthikselvaraj653@gmail.com</p>
   <p>
-    <a href="#">GitHub</a> |
-    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a> | <a href="#">LinkedIn</a>
   </p>
 </section>
 
-<footer class="footer">
-  © 2026 Karthik
-</footer>
+<footer>© 2026 Karthik Selvaraj</footer>
+
+<script>
+function show(id) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
 </html>
